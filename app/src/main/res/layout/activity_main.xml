@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    tools:context="com.example.riyadh.databasedemo.MainActivity">
+
+    <LinearLayout
+        android:background="#d6d6d6"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="0dp">
+
+        <EditText
+            android:padding="5dp"
+            android:background="#fff"
+            android:hint="Registration No."
+            android:id="@+id/reg"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <EditText
+            android:padding="5dp"
+            android:background="#fff"
+            android:hint="Course Code"
+            android:id="@+id/courseId"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+        <EditText
+            android:padding="5dp"
+            android:background="#fff"
+            android:hint="Mark"
+            android:id="@+id/mark"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight=".5"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+
+        <Button
+
+            android:id="@+id/addBT"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/colorAdd"
+            android:text="+"
+            android:textColor="@android:color/white"
+            android:textSize="40dp"/>
+        <Button
+
+            android:id="@+id/delBT"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight=".5"
+            android:background="@color/colorDel"
+            android:text="-"
+            android:textColor="@android:color/white"
+            android:textSize="40dp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight=".5"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="0dp">
+
+        <Button
+
+            android:id="@+id/showBT"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="#1b56b5"
+            android:text="view all"
+            android:textColor="@android:color/white"
+            android:textSize="25dp"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
