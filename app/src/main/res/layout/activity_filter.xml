@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="4.5"
+    tools:context="com.example.riyadh.databasedemo.filter">
+
+    <EditText
+        android:id="@+id/searchET"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:hint="Input here"
+        android:paddingLeft="5dp" />
+
+    <Button
+        android:id="@+id/byRegBT"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#b3c0d3"
+        android:text="Search by registration no."
+        android:textColor="@color/colorAdd" />
+
+    <Button
+        android:id="@+id/byCourseBT"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Search by Course"
+        android:textColor="@color/colorAdd" />
+
+    <Button
+        android:id="@+id/byMarkABT"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#b3c0d3"
+        android:text="Sort by Mark (Ascending)"
+        android:textColor="@color/colorAdd" />
+
+    <Button
+
+        android:id="@+id/byMarkDBT"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Sort by Mark (Ascending)"
+        android:textColor="@color/colorAdd" />
+
+</LinearLayout>

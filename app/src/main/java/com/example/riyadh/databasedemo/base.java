@@ -59,10 +59,30 @@ public class base extends SQLiteOpenHelper {
 
         int i = 0;
         for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
-            recvied_data[i++]= c.getString( c.getColumnIndex(col_reg) );
+            recvied_data[i++]= c.getString( c.getColumnIndex(col_reg) )+" | Course: "+c.getString(c.getColumnIndex(col_course))+" | Mark: "+
+                    c.getString(c.getColumnIndex(col_mark)) ;
         }
 
         return recvied_data;
     }
+
+    String[] getByReg(int reg){
+        SQLiteDatabase sq = this.getReadableDatabase();
+        String q = "select * from "+TABLE_NAME+" where "+col_reg+" ="+reg;
+        Cursor c = sq.rawQuery(q,null);
+        String[] res  = new String[c.getCount()];
+        int i = 0;
+        for (c.moveToFirst(); !c.isAfterLast(); c.moveToNext()) {
+            res[i++]= c.getString( c.getColumnIndex(col_reg) )+" | Course: "+c.getString(c.getColumnIndex(col_course))+" | Mark: "+
+                    c.getString(c.getColumnIndex(col_mark)) ;
+        }
+        return  res;
+
+    }
+    void removeAll(){
+
+    }
+
+
 
 }

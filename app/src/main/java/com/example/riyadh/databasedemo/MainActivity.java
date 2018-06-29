@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     EditText e1, e2, e3;
-    Button b1, b2,b3;
+    Button b1, b2,b3,b4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         b1 = (Button) findViewById(R.id.addBT);
         b2 = (Button) findViewById(R.id.delBT);
         b3 = (Button) findViewById(R.id.showBT);
+        b4 = (Button) findViewById(R.id.moreBT);
 
         b1.setOnClickListener(new View.OnClickListener() {
 
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
                                     mybase.addData(dt);
 
-                                      Toast.makeText(getApplicationContext(), "Button Add works!", Toast.LENGTH_LONG).show();
+                                      Toast.makeText(getApplicationContext(), "Added Successfully!", Toast.LENGTH_LONG).show();
                                   }
                               }
         );
@@ -53,7 +54,18 @@ public class MainActivity extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
                                   @Override
                                   public void onClick(View view) {
+                                      showing.flag = 0;
                                       startActivity( new Intent(getApplicationContext(),showing.class));
+                                  }
+                              }
+
+
+        );
+        b4.setOnClickListener(new View.OnClickListener() {
+                                  @Override
+                                  public void onClick(View view) {
+
+                                      startActivity( new Intent(getApplicationContext(),filter.class));
                                   }
                               }
 
